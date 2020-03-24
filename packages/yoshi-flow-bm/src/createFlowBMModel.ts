@@ -43,7 +43,6 @@ export default function createFlowBMModel(cwd = process.cwd()): FlowBMModel {
       expandDirectories: false,
     });
 
-  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   const moduleId = getProjectArtifactId(cwd)!;
 
   const pages = globFiles(pagesPattern).map(pagePath => ({

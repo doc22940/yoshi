@@ -27,7 +27,6 @@ export default (initialConfig: InitialConfig, pkgJson: PackageJson): Config => {
     : singleDir;
 
   const config: Config = {
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     name: name!,
     unpkg,
 

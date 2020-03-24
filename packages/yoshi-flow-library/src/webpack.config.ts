@@ -24,7 +24,6 @@ export function createClientWebpackConfig(
 ): webpack.Configuration {
   const entry = config.entry;
 
-  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   const name = stripOrganization(config.pkgJson.name!);
 
   const clientConfig = createBaseWebpackConfig({
@@ -48,7 +47,6 @@ export function createClientWebpackConfig(
     : entry;
 
   clientConfig.externals = config.externals;
-  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   clientConfig.output!.filename = isDev ? '[name].umd.js' : '[name].umd.min.js';
 
   return clientConfig;

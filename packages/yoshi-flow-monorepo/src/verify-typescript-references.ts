@@ -14,7 +14,6 @@ export default async function verifyTypeScriptReferences({
       const tsconfig = await fs.readJSON(tsconfigPath);
       const references = Array.from(pkg.localDependencies)
         .map(([depName]) => {
-          // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
           return path.relative(pkg.location, graph.get(depName)!.location);
         })
         .map(relativePath => ({ path: relativePath }));

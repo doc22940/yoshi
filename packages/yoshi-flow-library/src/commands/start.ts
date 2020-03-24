@@ -65,7 +65,6 @@ const start: cliCommand = async function(argv, config) {
     webpackConfigs: webpackConfigs as [webpack.Configuration?],
     webpackDevServerPort: config.port,
     https: false,
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     appName: config.pkgJson.name!,
     enableClientHotUpdates: false,
     compileTypeScriptFiles: true,

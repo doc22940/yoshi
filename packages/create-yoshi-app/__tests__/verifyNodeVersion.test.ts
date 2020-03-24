@@ -38,7 +38,6 @@ afterEach(() => {
 });
 
 test('should match node version successfully against .nvmrc file', () => {
-  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   setNodeVersion(semver.minVersion(nvmrc)!.version);
   verifyNodeVersion();
   expect(exitSpy).not.toHaveBeenCalled();

@@ -58,7 +58,6 @@ function prepareAssets(
 ): Array<Asset> {
   const assetsDir = optimizedStats.compilation.outputOptions.path;
 
-  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   return optimizedStats
     .toJson({ all: false, assets: true })
     .assets!.filter(asset => !asset.name.endsWith('.map'))

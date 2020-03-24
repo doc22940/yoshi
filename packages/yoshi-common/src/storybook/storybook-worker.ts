@@ -1,4 +1,3 @@
-/* eslint @typescript-eslint/no-non-null-assertion: 0 */
 import storybook from './storybook-process';
 
 (async () => {

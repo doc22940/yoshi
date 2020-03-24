@@ -409,7 +409,6 @@ export default class DevEnvironment {
     let publicPath: string | undefined;
 
     if (clientConfig) {
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       publicPath = clientConfig.output!.publicPath!;
 
       // Add client hot entries
@@ -461,7 +460,6 @@ export default class DevEnvironment {
 
     if (clientCompiler) {
       webpackDevServer = new WebpackDevServer(clientCompiler, {
-        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
         publicPath: publicPath!, // we have public path if we have clientCompiler
         https,
         port: webpackDevServerPort,

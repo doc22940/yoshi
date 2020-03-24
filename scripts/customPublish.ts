@@ -56,9 +56,7 @@ function shouldPublishPackage(pkg: Package) {
 }
 
 function getTag(pkg: Package) {
-  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   const isLessThanLatest = () => semver.lt(pkg.version!, getLatestVersion(pkg));
-  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   const isPreRelease = () => semver.prerelease(pkg.version!) !== null;
 
   // if the version is less than the version tagged as latest in the registry

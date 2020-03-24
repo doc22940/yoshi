@@ -84,12 +84,10 @@ export class ServerProcess {
     const serverLogWriteStream = fs.createWriteStream(
       path.join(this.cwd, SERVER_LOG_FILE),
     );
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     const serverOutLogStream = this.child.stdout!.pipe(serverLogPrefixer());
     serverOutLogStream.pipe(serverLogWriteStream);
     serverOutLogStream.pipe(process.stdout);
 
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     const serverErrorLogStream = this.child.stderr!.pipe(serverLogPrefixer());
     serverErrorLogStream.pipe(serverLogWriteStream);
     serverErrorLogStream.pipe(process.stderr);
