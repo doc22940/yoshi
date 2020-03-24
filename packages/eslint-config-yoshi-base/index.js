@@ -168,6 +168,7 @@ module.exports = {
         '@typescript-eslint/adjacent-overload-signatures': 'error',
         'no-sequences': 'error',
         '@typescript-eslint/no-namespace': 'error',
+        '@typescript-eslint/no-non-null-assertion': 'error',
         '@typescript-eslint/triple-slash-reference': 'error',
         '@typescript-eslint/prefer-for-of': 'error',
         curly: 'error',
